@@ -1,0 +1,33 @@
+#include<stdio.h>
+main()
+{
+	int jing, cost, mama, over, end, i;
+	for(i=1; i<=12; i++)
+	{
+		jing = jing + 300;
+		scanf("%d", &cost);
+		jing = jing - cost;
+		if(jing < 0)
+		{
+			over = 1;
+			end = i;
+			break;
+
+		}
+		mama = mama + jing/100;
+
+		jing = jing % 100;
+	}
+	if(over != 1)
+	{
+		jing = jing + mama * 120;
+		printf("%d\n", jing);
+
+	}
+	else
+	{
+		end = - end;
+		printf("%d\n",end);
+	}
+	return 0; 
+}
